@@ -1,0 +1,67 @@
+/* Display */
+.td-none { display: none !important; }
+.td-flex { display: flex; width: 100% !important; }
+.td-block { display: block; width: 100% !important; }
+.td-inline { display: inline; width: 100% !important; }
+.td-inline-block { display: inline-block; width: 100% !important; }
+
+/* Position */
+.tp-right { text-align: right !important; }
+.tp-center { text-align: center !important; }
+.tp-left { text-align: left !important; }
+
+/* Colors */
+.tc-1 { color: #333333 !important; }
+.tc-2 { color: #555555 !important; }
+.tc-3 { color: #777777 !important; }
+.tc-4 { color: #ffffff !important; }
+.tc-5 { color: #999999 !important; }
+.tc-6 { color: #cccccc !important; }
+
+/* Bold */
+.tb-1 { font-weight: lighter !important; }
+.tb-2 { font-weight: 300 !important; }
+.tb-3 { font-weight: 400 !important; }
+.tb-4 { font-weight: 500 !important; }
+.tb-5 { font-weight: 600 !important; }
+.tb-6 { font-weight: bolder !important; }
+
+/* Sizes */
+.ts-10 { font-size: 10px !important; }
+.ts-12 { font-size: 12px !important; }
+.ts-13 { font-size: 13px !important; }
+.ts-14 { font-size: 14px !important; }
+.ts-15 { font-size: 15px !important; }
+.ts-16 { font-size: 16px !important; }
+.ts-17 { font-size: 17px !important; }
+.ts-18 { font-size: 18px !important; }
+.ts-19 { font-size: 19px !important; }
+.ts-20 { font-size: 20px !important; }
+.ts-21 { font-size: 21px !important; }
+.ts-22 { font-size: 22px !important; }
+.ts-23 { font-size: 23px !important; }
+.ts-24 { font-size: 24px !important; }
+.ts-25 { font-size: 25px !important; }
+
+/* Master Sizes Titles */
+.tms-30 { font-size: 30px !important; } /* Text Master Size */
+.tms-40 { font-size: 40px !important; } /* Text Master Size */
+.tms-50 { font-size: 50px !important; } /* Text Master Size */
+
+/* Transforms */
+.tf-upper { text-transform: uppercase !important; }
+.tf-lower { text-transform: lowercase !important; }
+.tf-capital { text-transform: capitalize !important; }
+
+/* Decoration */
+.t-under { text-decoration: underline !important; }
+.t-over { text-decoration: overline !important; }
+.t-line { text-decoration: line-through !important; }
+
+/* Shadow */
+.t-shadow-dark { text-shadow: 1px 1px 1px #000000 !important; }
+.t-shadow-light { text-shadow: 1px 1px 1px #dddddd !important; }
+
+/* Usage 
+<h1 class="td-flex ts-2 tb-6 tc-1 tf-upper">Title</h1>
+*/

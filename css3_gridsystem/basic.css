@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-rendering: optimizeSpeed;
+    box-sizing: border-box;
+    outline: 0;
+    -webkit-tap-highlight-color: transparent; /* Safari */
+}
+
+body { 
+    background-color: #f5f5f5; 
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}

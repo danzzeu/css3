@@ -1,0 +1,80 @@
+:root { --spaces: 15px; }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spaces);
+    padding: var(--spaces);
+}
+
+.grid {
+    display: grid;
+    row-gap: var(--spaces);
+    column-gap: var(--spaces);
+    width: 100%;
+}
+
+/* Fixed Grid Sizes */
+.gf-1, .gr-1 { grid-template-columns: 1fr; }
+.gf-2, .gr-2 { grid-template-columns: repeat(2, 1fr); }
+.gf-3, .gr-3 { grid-template-columns: repeat(3, 1fr); }
+.gf-4, .gr-4 { grid-template-columns: repeat(4, 1fr); }
+.gf-5, .gr-5 { grid-template-columns: repeat(5, 1fr); }
+
+/* Responsive Grid Sizes */
+@media (min-width: 0) and (max-width: 699px) { 
+    .gr-1, .gr-2, .gr-3, .gr-4, .gr-5 { grid-template-columns: 1fr; }
+}
+@media (min-width: 700px) and (max-width: 899px) {
+    .gr-1 { grid-template-columns: 1fr; }
+    .gr-2, .gr-3, .gr-4, .gr-5 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) and (max-width: 1099px) {
+    .gr-1 { grid-template-columns: 1fr; }
+    .gr-2 { grid-template-columns: repeat(2, 1fr); }
+    .gr-3, .gr-4, .gr-5 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1100px) and (max-width: 1299px) {
+    .gr-1 { grid-template-columns: 1fr; }
+    .gr-2 { grid-template-columns: repeat(2, 1fr); }
+    .gr-3 { grid-template-columns: repeat(3, 1fr); }
+    .gr-4, .gr-5 { grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 1300px) { 
+    .gr-1 { grid-template-columns: 1fr; }
+    .gr-2 { grid-template-columns: repeat(2, 1fr); }
+    .gr-3 { grid-template-columns: repeat(3, 1fr); }
+    .gr-4 { grid-template-columns: repeat(4, 1fr); }
+    .gr-5 { grid-template-columns: repeat(5, 1fr); }
+}
+
+.row { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spaces);
+    width: 100%;
+}
+
+/* Usage
+<main class="container-center">
+    <section class="grid gf-1">
+        <div class="column">...</div>
+    </section>
+    <section class="grid gr-4">
+        <div class="column">...</div>
+        <div class="column">...</div>
+        <div class="column">...</div>
+        <div class="column">...</div>
+    </section>
+    <section class="grid gf-1">
+        <div class="row">...</div>
+    </section>
+</main>
+*/
