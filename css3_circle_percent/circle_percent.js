@@ -3,44 +3,43 @@ let percents = document.getElementsByClassName("circle-percent-config");
 for (let percent of percents) {
     let dataWidth = parseFloat(percent.getAttribute("data-width"));
     let dataBackground = percent.getAttribute("data-background");
-    let dataBorderSize = parseFloat(percent.getAttribute("data-stroke"));
-    let dataPrimaryColor = percent.getAttribute("data-stroke-primary");
-    let dataSecondaryColor = percent.getAttribute("data-stroke-secondary");
+    let dataStrokeSize = parseFloat(percent.getAttribute("data-stroke"));
+    let dataStrokeBg = percent.getAttribute("data-stroke-bg");
+    let dataStrokeColor = percent.getAttribute("data-stroke-color");
+    let dataTextColor = percent.getAttribute("data-text-color");
+    let dataFontSize = parseFloat(percent.getAttribute("data-font-size"));
     let dataPercent = parseFloat(percent.getAttribute("data-percent"));
-    let dataColor = percent.getAttribute("text-color");
-    let dataFontSize = parseFloat(percent.getAttribute("text-size"));
-    let dataContainerWidth = (dataWidth * 2) + dataBorderSize;
-
-    percent.style.setProperty("--border-primary", dataPrimaryColor);
-    percent.style.setProperty("--border-secondary", dataSecondaryColor);
-    percent.style.setProperty("--percent", dataPercent);
-    percent.style.setProperty("--fill", dataBackground);
-    
-
-    let div = document.createElement("div");
-    div.className = "percent";
 
     let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svg.setAttribute("height", dataContainerWidth);
-    svg.setAttribute("width", dataContainerWidth);
-    svg.setAttribute("viewBox", "0 0 "+ dataContainerWidth + " " + dataContainerWidth);
-    
+    svg.setAttribute("height", dataWidth);
+    svg.setAttribute("width", dataWidth);
+    svg.setAttribute("viewBox", "0 0 36 36");
+    svg.setAttribute("overflow", "visible");
 
-    let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-    circle.setAttribute("cx", dataWidth);
-    circle.setAttribute("cy", dataWidth);
-    circle.setAttribute("r", dataWidth);
-    svg.appendChild(circle);
-    svg.appendChild(circle.cloneNode(true));
+    let pathA = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    pathA.setAttributeNS(null, "d", "M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831");
+    pathA.setAttributeNS(null, "stroke", dataStrokeBg);
+    pathA.setAttributeNS(null, "stroke-width", dataStrokeSize);
+    pathA.setAttributeNS(null, "fill", dataBackground);
+    pathA.setAttributeNS(null, "stroke-linecap", "round");
+    pathA.setAttributeNS(null, "stroke-dasharray", "100 100");
 
-    div.appendChild(svg);
+    let pathB = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    pathB.setAttributeNS(null, "d", "M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831");
+    pathB.setAttributeNS(null, "stroke", dataStrokeColor);
+    pathB.setAttributeNS(null, "stroke-width", 2);
+    pathB.setAttributeNS(null, "fill", dataBackground);
+    pathB.setAttributeNS(null, "stroke-linecap", "round");
+    pathB.setAttributeNS(null, "stroke-dasharray", dataPercent + " 100");
+
+    svg.appendChild(pathA);
+    svg.appendChild(pathB);
 
     let span = document.createElement("span");
-    span.textContent = '10%';
-    span.style.color = dataColor;
+    span.textContent = dataPercent + "%";
+    span.style.color = dataTextColor;
     span.style.fontSize = dataFontSize + "px";
 
-    div.appendChild(span);
-
-    percent.appendChild(div);
+    percent.appendChild(svg);
+    percent.appendChild(span);
 }
