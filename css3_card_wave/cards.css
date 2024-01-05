@@ -9,7 +9,7 @@
 }
 
 .card-header { 
-    position: absolute;
+    position: relative;
     top: 30px;
     left: 30px;
     font-size: 30px;
@@ -20,8 +20,8 @@
 }
 
 .card-body { 
-    position: absolute;
-    top: 80px;
+    position: relative;
+    top: 40px;
     left: 30px;
     font-size: 20px;
     font-weight: 400;
