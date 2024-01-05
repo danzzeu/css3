@@ -19,16 +19,16 @@ for (let percent of percents) {
     let pathA = document.createElementNS("http://www.w3.org/2000/svg", "path");
     pathA.setAttributeNS(null, "d", "M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831");
     pathA.setAttributeNS(null, "stroke", dataStrokeBg);
-    pathA.setAttributeNS(null, "stroke-width", dataStrokeSize);
-    pathA.setAttributeNS(null, "fill", dataBackground);
+    pathA.setAttributeNS(null, "stroke-width", dataStrokeSize < 4 ? 4 : dataStrokeSize);
+    pathA.setAttributeNS(null, "fill", "transparent");
     pathA.setAttributeNS(null, "stroke-linecap", "round");
     pathA.setAttributeNS(null, "stroke-dasharray", "100 100");
 
     let pathB = document.createElementNS("http://www.w3.org/2000/svg", "path");
     pathB.setAttributeNS(null, "d", "M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831");
     pathB.setAttributeNS(null, "stroke", dataStrokeColor);
-    pathB.setAttributeNS(null, "stroke-width", 2);
-    pathB.setAttributeNS(null, "fill", dataBackground);
+    pathB.setAttributeNS(null, "stroke-width", dataStrokeSize);
+    pathB.setAttributeNS(null, "fill", "transparent");
     pathB.setAttributeNS(null, "stroke-linecap", "round");
     pathB.setAttributeNS(null, "stroke-dasharray", dataPercent + " 100");
 
@@ -42,4 +42,6 @@ for (let percent of percents) {
 
     percent.appendChild(svg);
     percent.appendChild(span);
+
+    percent.style.backgroundColor = dataBackground;
 }
