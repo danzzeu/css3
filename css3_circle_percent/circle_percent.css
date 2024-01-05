@@ -1,0 +1,45 @@
+:root {
+    --border-primary: #1e90ff;
+    --border-secondary: red;
+    --percent: 0;
+    --fill: none;
+}
+
+.percent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    position: relative;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: var(--border-primary);
+}
+
+.percent svg circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-dasharray: 440;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    fill: var(--fill);
+}
+
+.percent svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: var(--border-primary);
+}
+
+.percent svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * var(--percent)) / 100);
+    stroke: var(--border-secondary);
+}
+
+.percent span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    line-height: 0;
+}
