@@ -1,0 +1,133 @@
+/* Bootstap Icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Barlow', sans-serif;
+    text-rendering: optimizeSpeed;
+    box-sizing: border-box;
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html { scroll-behavior: smooth; }
+
+body { background-color: #f8db27; }
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    background: radial-gradient(circle at 10% 20%, rgb(251, 221, 19) 0.1%, rgb(255, 153, 1) 90%);
+}
+
+.shape {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    clip-path: polygon(100% 0%, 0% 0% , 0% 65%, 1% 64.95%, 2% 64.8%, 3% 64.6%, 4% 64.3%, 5% 63.9%, 6% 63.45%, 7% 62.9%, 8% 62.25%, 9% 61.55%, 10% 60.8%, 11% 59.95%, 12% 59.05%, 13% 58.1%, 14% 57.1%, 15% 56.05%, 16% 55%, 17% 53.9%, 18% 52.8%, 19% 51.65%, 20% 50.5%, 21% 49.35%, 22% 48.2%, 23% 47.05%, 24% 45.9%, 25% 44.8%, 26% 43.75%, 27% 42.75%, 28% 41.75%, 29% 40.8%, 30% 39.9%, 31% 39.1%, 32% 38.35%, 33% 37.65%, 34% 37.05%, 35% 36.5%, 36% 36.05%, 37% 35.65%, 38% 35.35%, 39% 35.15%, 40% 35.05%, 41% 35%, 42% 35.05%, 43% 35.2%, 44% 35.45%, 45% 35.75%, 46% 36.15%, 47% 36.65%, 48% 37.2%, 49% 37.85%, 50% 38.55%, 51% 39.35%, 52% 40.2%, 53% 41.1%, 54% 42.05%, 55% 43.05%, 56% 44.1%, 57% 45.15%, 58% 46.3%, 59% 47.4%, 60% 48.55%, 61% 49.7%, 62% 50.85%, 63% 52%, 64% 53.15%, 65% 54.25%, 66% 55.35%, 67% 56.4%, 68% 57.45%, 69% 58.4%, 70% 59.35%, 71% 60.2%, 72% 61.05%, 73% 61.8%, 74% 62.45%, 75% 63.05%, 76% 63.6%, 77% 64.05%, 78% 64.4%, 79% 64.7%, 80% 64.85%, 81% 65%, 82% 65%, 83% 64.9%, 84% 64.75%, 85% 64.5%, 86% 64.2%, 87% 63.75%, 88% 63.25%, 89% 62.7%, 90% 62.05%, 91% 61.3%, 92% 60.5%, 93% 59.65%, 94% 58.75%, 95% 57.8%, 96% 56.8%, 97% 55.75%, 98% 54.65%, 99% 53.55%, 100% 52.4%);
+}
+
+.image-404 {
+    position: absolute;
+    bottom: 0;
+    object-fit: cover;
+}
+
+.info {
+    position: absolute;
+    z-index: 5;
+    align-items: flex-start;
+    top: 50px;
+    left: 50px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info h1 { 
+    text-align: left;
+    animation: jello 2s infinite;
+    transform-origin: center;
+}
+
+.info a {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(255, 153, 1);
+    text-align: center;
+    margin-bottom: 15px;
+    width: fit-content;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    animation: jello 2s infinite;
+    transform-origin: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.info a:hover {
+    background-color: #2F64D6;
+}
+
+.info i {
+    color: rgb(255, 153, 1);
+    font-size: 40px;
+    cursor: pointer;
+    animation: jello 2s infinite;
+    transform-origin: center;
+    transition: all 0.3s ease-in-out;
+    margin-top: -15px;
+}
+
+.info i:hover {
+    color: #2F64D6;
+}
+
+@media (max-width: 600px) {
+    .image-404 {
+        height: 90%;
+    }
+}
+
+@keyframes jello {
+    11.1% {
+      transform: none
+    }
+    22.2% {
+      transform: skewX(-12.5deg) skewY(-12.5deg)
+    }
+    33.3% {
+      transform: skewX(6.25deg) skewY(6.25deg)
+    }
+    44.4% {
+      transform: skewX(-3.125deg) skewY(-3.125deg)
+    }
+    55.5% {
+      transform: skewX(1.5625deg) skewY(1.5625deg)
+    }
+    66.6% {
+      transform: skewX(-0.78125deg) skewY(-0.78125deg)
+    }
+    77.7% {
+      transform: skewX(0.390625deg) skewY(0.390625deg)
+    }
+    88.8% {
+      transform: skewX(-0.1953125deg) skewY(-0.1953125deg)
+    }
+    100% {
+      transform: none
+    }
+  }
