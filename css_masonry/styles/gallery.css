@@ -1,0 +1,40 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 15px;
+    columns: 4;
+    column-gap: 15px;
+}
+
+.box {
+    display: flex;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.box:hover { scale: 1.05; }
+
+.box img {
+    width: 100%;
+    object-fit: contain;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+    .container { columns: 1; }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+    .container { columns: 2; }
+}
+
+@media (min-width: 801px) and (max-width: 1000px) {
+    .container { columns: 3; }
+}
+
+@media (min-width: 1001px) and (max-width: 1200px) {
+    .container { columns: 4; }
+}
