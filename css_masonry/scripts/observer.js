@@ -1,6 +1,6 @@
-const style = document.createElement('style');
+const styleObserver = document.createElement('style');
 
-style.textContent = `
+styleObserver.textContent = `
     html { scroll-behavior: smooth; }
 
     .showObserver { animation: fadeInRight 0.8s forwards }
@@ -17,7 +17,7 @@ style.textContent = `
     }
 `;
 
-document.head.appendChild(style);
+document.head.appendChild(styleObserver);
 
 let observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
