@@ -1,4 +1,4 @@
-const style = document.createElement('style');
+const stylePercent = document.createElement('style');
 
 style.textContent = `
 		.circle-percent-config {
@@ -31,7 +31,7 @@ style.textContent = `
 	}
 `;
 
-document.head.appendChild(style);
+document.head.appendChild(stylePercent);
 
 let percents = document.getElementsByClassName("circle-percent-config");
 
