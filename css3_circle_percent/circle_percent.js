@@ -1,3 +1,38 @@
+const style = document.createElement('style');
+
+style.textContent = `
+		.circle-percent-config {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+		height: fit-content;
+		border-radius: 50%;
+	}
+
+	.circle-percent-config span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.circle-percent-config svg {
+		position: relative;
+	}
+
+	.circle-percent-config svg path {
+		animation: progress 1s ease-out forwards;
+	}
+
+	@keyframes progress {
+		0% { stroke-dasharray: 0 100; }
+	}
+`;
+
+document.head.appendChild(style);
+
 let percents = document.getElementsByClassName("circle-percent-config");
 
 for (let percent of percents) {
