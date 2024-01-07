@@ -62,7 +62,7 @@ for (let percent of percents) {
     let pathB = document.createElementNS("http://www.w3.org/2000/svg", "path");
     pathB.setAttributeNS(null, "d", "M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831");
     pathB.setAttributeNS(null, "stroke", dataStrokeColor);
-    pathB.setAttributeNS(null, "stroke-width", dataStrokeSize);
+    pathB.setAttributeNS(null, "stroke-width", dataStrokeSize > 4 ? 4 : dataStrokeSize);
     pathB.setAttributeNS(null, "fill", "transparent");
     pathB.setAttributeNS(null, "stroke-linecap", "round");
     pathB.setAttributeNS(null, "stroke-dasharray", dataPercent + " 100");
