@@ -1,6 +1,6 @@
 const stylePercent = document.createElement('style');
 
-style.textContent = `
+stylePercent.textContent = `
 		.circle-percent-config {
 		position: relative;
 		display: flex;
